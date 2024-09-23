@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Cake webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <!-- Add a link to your css file here -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+</head>
+
+<body>
+    <!-- Add your markup here -->
+    <header>
+      <div class="logo-section">
+        <a href="#">
+          <img src="logo3.jpg" class="logo" alt="Cake logo">
+        </a>
+        <h1 class="site-description">
+          Los mejores pasteles del Born desde 1998
+        </h1>
+    
+        <!-- Add a button for the mobile menu -->
+        <button class="menu-button" aria-label="Menu">&#9776;</button>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="#" class="main-nav-link">Nuestra cafetería</a></li>
+          <li><a href="#" class="main-nav-link">Los pasteles</a></li>
+          <li><a href="#" class="main-nav-link">Hacer un pedido</a></li>
+          <li><a href="#" class="main-nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    
+    
+    <main>
+      <div>
+          <div class="container">
+              <!-- Hero Section -->
+              <div class="hero-section">
+                  <div class="hero-image-container">
+                      <img src="https://i.pinimg.com/564x/11/ec/98/11ec98438504497e367cb597b6c5c12d.jpg">
+                  </div>
+  
+                  <div class="hero-content">
+                      <h1 class="hero-heading heading-primary">
+                          Discúbre el mundo de <span>Café Zanahoria</span>
+                      </h1>
+                      <p class="hero-description">
+                          Sumérgete en un mundo de sabores irresistibles y detalles artesanales. Desde nuestro famoso carrot cake hasta nuestros cafés molidos en nuestra pequeña pastelería, cada creación está hecha con cariño y dedicación.
+                      </p>
+                  </div>
+              </div>
+  
+              <!-- Featured Section -->
+              <h1 class="featured-heading heading-secondary">NUESTRAS ESPECIALIDADES</h1>
+              <div class="featured-section-wrapper">
+                  <div class="featured-section">
+                      <figure class="featured-image">
+                          <img src="https://i.pinimg.com/564x/92/46/a3/9246a380c916c9f2cec7f70412fb18dc.jpg" alt="carrot-cake1">
+                      </figure>
+                      <figure class="café-1">
+                          <img src="https://i.pinimg.com/564x/d7/bb/7c/d7bb7c041b0869a9a89211167516dc1f.jpg" alt="café">
+                      </figure>
+                      <figure class="featured-image">
+                          <img src="https://i.pinimg.com/564x/53/48/d4/5348d49988179cd856449b41043bceb1.jpg" alt="coffee">
+                      </figure>
+                      <figure class="featured-image">
+                          <img src="https://i.pinimg.com/564x/58/db/48/58db480bbf0e4d187cc672a6db434e69.jpg" alt="café1">
+                      </figure>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Gourmet Box Section -->
+      <div class="gourmet-box">
+        <h1>DESCUBRE NUESTRA PROPUESTA DE PASTELES DE ZANAHORIA GOURMET A DOMICILIO</h1>
+        <p>Disfruta de una experiencia gourmet, cuándo y cómo quieras.<br>Déjate sorprender por nuestra calidad de ingedientes y riqueza de sabores.</p>
+        <p>Nuestros deliciosos pasteles también son ideales como regalo: para el día de la madre, para celebrar un cumpleaños o para felicitar a un amigo o familiar.</p>
+    
+        <!-- Button for making an order -->
+        <a href="#" class="order-button">Haz tu pedido</a>
+    </div>
+    <section class="newsletter-section">
+      <div class="container">
+        <h3 class="newsletter-title">Únete a nuestro correo electrónico</h3>
+        <p class="newsletter-description">
+          Puede darse de baja en cualquier momento. Para ello, consulte nuestra información de contacto en el aviso legal.
+        </p>
+    
+        <form class="newsletter-form" action="#" method="post">
+          <div class="form-group">
+            <input type="email" class="newsletter-input" name="email" placeholder="Tu correo electrónico..." required>
+            <button type="submit" class="newsletter-submit">Suscribir</button>
+          </div>
+          <div class="gdpr-consent">
+            <label>
+              <input type="checkbox" name="gdpr-consent" required>
+              Acepto las condiciones generales y la&nbsp;
+              <a href="#" target="_blank" rel="nofollow">política de confidencialidad</a>
+            </label>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+  
+  </main>
+  
+
+
+    <footer>
+      <footer class="footer-section">
+        <div class="container footer">
+          <div class="logo-col">
+            <ul class="social-links">
+              <li>
+                <a href="#" class="footer-link"><ion-icon class="social-icon md hydrated" name="logo-twitter"></ion-icon></a>
+              </li>
+              <li>
+                <a href="#" class="footer-link"><ion-icon class="social-icon md hydrated" name="logo-facebook"></ion-icon></a>
+              </li>
+              <li>
+                <a href="#" class="footer-link"><ion-icon class="social-icon md hydrated" name="logo-instagram"></ion-icon></a>
+              </li>
+            </ul>
+            <p class="copyright">
+              Copyright © 2024 by Café Zanahoria<br>
+              All rights reserved
+            </p>
+          </div>
+      
+          <div class="address-col">
+            <p class="footer-heading">Contact us</p>
+            <address class="contacts">
+              <p class="address">Carrer de Gombau 12, 08003 Barcelona</p>
+              <p>
+                <a href="tel:612-345-678" class="footer-link">612-345-678</a>
+              </p>
+              <p>
+                <a href="mailto:hello@zanahoria.com" class="footer-link">hello@zanahoria.com</a>
+              </p>
+            </address>
+          </div>
+      
+          <div class="made-by">
+            <span>Made by Ly-Ly @ MigraCode Barcelona</span>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+
+</html>

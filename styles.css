@@ -1,0 +1,436 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General font styles */
+body {
+    background-color: rgba(198,190,171,255);
+    font-family: 'New York Times', serif; /* Montserrat as the default font */
+    font-weight: 600; /* Regular weight for body text */
+}
+
+/* Bold and italic font for all headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'New York Times', serif; /* New York Times for headings */
+    font-weight: 700; /* Bold weight for all headings */
+    font-style: italic; /* Italic headings */
+}
+
+/* Specific adjustments if needed */
+.site-description, .main-nav-link, p {
+    font-family: 'New York Times'; /* Montserrat for other text */
+    font-weight: 400; /* Regular weight for paragraphs and links */
+}
+
+
+h1 {   
+    color: hsl(39, 66%, 16%);  
+    text-align: center;
+}
+
+header {
+    background-color: rgba(198,190,171,255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    height: auto;
+    margin-bottom: 0; /* Ensure no gap between header and main */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo-section img {
+    height: 150px;
+    margin-right: 1rem;
+}
+
+.site-description {
+    font-size: 1.6rem;
+    color: hsl(39, 66%, 16%);
+    margin-right:  rem; /* Move the text further to the right */
+    margin-top: -1rem; /* Move the text closer to the navigation bar */
+    align-self: flex-end; /* Align it to the right within the flexbox */
+}
+
+/* Menu Button */
+.menu-button {
+    display: none; /* Hide by default on desktop */
+    background-color: rgb(138, 134, 53); /* Same green as the nav bar */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Make it round */
+    padding: 1rem;
+    width: 50px; /* Round button */
+    height: 50px;
+    font-size: 1.5rem; /* Icon size */
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+/* Mobile view: hide nav bar, show menu button */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; /* Hide the navigation bar on mobile */
+    }
+
+    .menu-button {
+        display: block; /* Show the menu button on mobile */
+    }
+}
+
+/* Navigation Bar for Desktop */
+.main-nav {
+    background-color: rgb(138, 134, 53); /* Same green as the gourmet box */
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border: 2px solid rgb(216, 210, 204); /* Light border */
+    width: 100vw; /* Extend nav bar to full width of the viewport */
+    margin-left: calc(-50vw + 50%); /* Make sure it extends all the way to the left and right */
+    margin-right: calc(-50vw + 50%); /* Ensure the same for the right */
+    border-radius: 0; /* Remove rounded edges */
+}
+
+/* Remove roundness of buttons in nav */
+.main-nav-link {
+    text-decoration: none;
+    color: rgb(252, 251, 250); /* Light text color */
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent; /* No visible border around the buttons */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0; /* Sharp edges for buttons */
+}
+
+.main-nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.main-nav-list li {
+    margin-left: 2rem;
+}
+
+.main-nav-link {
+    text-decoration: none;
+    color: rgb(252, 251, 250); /* Light text color like the gourmet box */
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav-link:hover {
+    background-color: rgb(240, 237, 231); /* Light hover effect */
+    color: rgb(120, 82, 11); /* Dark text on hover */
+}
+
+
+/* Hero Section */
+.hero-section {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: nowrap; /* Ensure no wrapping on larger screens */
+}
+
+.hero-image-container {
+    flex: 1 1 50%; /* Image takes up 50% of the width */
+    margin-right: 2rem; /* Space between image and text */
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hero-content {
+    flex: 1 1 50%; /* Text takes up 50% of the width */
+    text-align: left; /* Align text to the left */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: hsl(39, 66%, 16%); /* Keep the dark color */
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    color: hsl(39, 66%, 16%); /* Keep the dark color */
+    line-height: 1.5;
+}
+
+/* Mobile View: Stack text on top of image */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column-reverse; /* Stack text above image on mobile */
+        flex-wrap: wrap; /* Allow wrapping on mobile */
+    }
+
+    .hero-image-container, .hero-content {
+        flex: 1 1 100%; /* Full width on mobile */
+        margin-right: 0; /* Remove margin on mobile */
+        text-align: center; /* Center text on mobile */
+    }
+}
+
+
+
+/* Full-width background for the featured section */
+.featured-section-wrapper {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Ensure background extends to the left */
+    margin-right: calc(-50vw + 50%); /* Ensure background extends to the right */
+    background-color: rgb(46, 29, 22); /* Dark brown background */
+    padding: 2rem 0; /* Padding for space above and below */
+}
+
+/* Flexbox layout for images */
+.featured-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    padding: 1.6rem;
+    margin-bottom: 0;
+    width: 100%; /* Full width inside container */
+}
+
+/* Flex behavior for images */
+.featured-section figure {
+    flex: 1 1 45%; /* 45% width for images on mobile (two per row) */
+}
+
+/* Adjust for desktop */
+@media (min-width: 1024px) {
+    .featured-section figure {
+        flex: 1 1 22%; /* 22% width for images on desktop (four per row) */
+    }
+}
+
+
+.featured-section img {
+    width: 100%;
+    height: auto;
+}
+
+/* Gourmet Box Styling */
+.gourmet-box {
+    background-color: rgb(138, 134, 53); /* Green background */
+    color: rgb(216, 210, 204); /* Light color */
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 720px; /* Keep the same width */
+    border-radius: 0; /* Remove rounded corners */
+    text-align: center;
+    font-family: "Chronicle Text G2 A", "Chronicle Text G2 B", serif;
+}
+.gourmet-box h1 {
+    font-size: 2.5rem;
+    color: rgb(252, 251, 250); /* Light color for the heading */
+    margin-bottom: 1rem;
+}
+
+.gourmet-box p {
+    font-size: 1.6rem;
+    color: rgb(252, 251, 250); /* Light text for the paragraph */
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+/* Button for 'Hacer tu pedido' styled like the nav bar */
+.order-button {
+    display: inline-block;
+    background-color: rgb(138, 134, 53); /* Same green as the nav bar */
+    color: rgb(252, 251, 250); /* Light text color */
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    border: 2px solid rgb(216, 210, 204); /* Light border */
+    border-radius: 12px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+/* Hover effect for the button */
+.order-button:hover {
+    background-color: rgb(240, 237, 231); /* Light hover background */
+    color: rgb(120, 82, 11); /* Dark text on hover */
+}
+/* Newsletter Section */
+.newsletter-section {
+    background-color: hsl(39, 66%, 16%); /* Slightly lighter background */
+    padding: 3rem 1rem;
+    text-align: center;
+    font-family: 'New York Times', serif;
+    margin-top: 3rem;
+}
+
+.newsletter-title {
+    font-size: 2rem;
+    color:  hsl(37, 42%, 94%));
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.newsletter-description {
+    font-size: 1.4rem;
+    color: hsl(37, 42%, 94%);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align form elements */
+}
+
+/* Ensure form group is centered */
+.form-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center; /* Center the input and button */
+    width: 100%;
+}
+
+.newsletter-input {
+    padding: 0.8rem 1rem;
+    border: 2px solid rgb(216, 210, 204);
+    background-color: rgba(198, 190, 171, 255); /* Same background as the page */
+    font-size: 1.2rem;
+    border-radius: 12px;
+    width: 300px; /* Adjust width */
+    max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.newsletter-submit {
+    background-color: rgb(138, 134, 53);
+    color: rgb(252, 251, 250);
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    border: 2px solid rgb(216, 210, 204);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-submit:hover {
+    background-color: rgb(240, 237, 231);
+    color: rgb(120, 82, 11);
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column; /* Stack input and button on mobile */
+        width: 100%;
+    }
+
+    .newsletter-input, .newsletter-submit {
+        width: 100%; /* Full width for mobile */
+    }
+}
+
+.gdpr-consent {
+    font-size: 1.2rem;
+    color:  hsl(37, 42%, 94%);
+    font-style: italic;
+}
+
+.gdpr-consent a {
+    color: hsl(37, 42%, 94%);
+    text-decoration: none;
+}
+
+.gdpr-consent input {
+    margin-right: 0.5rem;
+}
+
+
+/* Footer Section */
+.footer-section {
+    padding: 6rem 0;
+    background-color: rgb(4, 4, 4); /* Matching the green */
+    color: rgb(252, 251, 250); /* Light text color */
+    font-family: 'New York Times', serif; /* Font for the footer */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around; /* More central alignment */
+    align-items: center; /* Align content vertically */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo-col, .address-col, .made-by {
+    flex: 1;
+}
+
+.footer-logo {
+    margin-bottom: 0.5rem;
+}
+
+.logo {
+    width: 150px; /* Smaller logo size */
+    height: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Center-align the social icons */
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: rgb(252, 251, 250);
+}
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.contacts .address, .footer-link {
+    font-size: 1.4rem;
+    color: rgb(252, 251, 250);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: rgb(252, 251, 250);
+}
+
+.footer-link:hover {
+    color: rgb(240, 237, 231); /* Slight hover effect */
+}
+
+.copyright, .made-by {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    color: rgb(252, 251, 250);
+    text-align: center;
+}
+
+.made-by {
+    font-style: italic;
+}
